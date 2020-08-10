@@ -4,12 +4,20 @@
         <title>Hello Robin | Home</title>
         <meta name="author" content="K. Abell" />
         <meta charset="utf-8" />
-        <!-- <meta name="viewport" content="width=device-width,inital-scale=1" /> -->
+        <meta name="viewport" content="width=device-width,inital-scale=1" />
         <meta name="robots" content="noindex,nofollow" />
         <link href="css/reset.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet" />
         <script src="https://kit.fontawesome.com/1552b45d46.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script>
+            $(document).ready(function(){
+                $(".nav-button").click(function () {
+                $(".nav-button,.primary-nav").toggleClass("open");
+                });    
+            });
+		</script>
     </head>
     
     <body class="home">
@@ -24,12 +32,29 @@
                         <a href="index.html"><img src="img/robin-egg.png" alt="robin egg logo"></a>
                     </div>
 
-                    <nav>
+                    <!-- <nav>
                         <a href="#">Menu</a>
                         <a href="#">Story</a>
                         <a href="#">Partners</a>
                         <a href="#">Media</a>
                         <a href="#">Contact</a>
+                    </nav> -->
+
+                    <nav>
+                        <button class="nav-button">Toggle Navigation</button>
+                        <ul class="primary-nav">
+                            <li class="nav-home"><a href="#">Home</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">Story</a></li>
+                            <li class="parent"><a href="#">Partners</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Molly Moon's</a></li>
+                                    <li><a href="#">Cone & Steiner</a></li>
+                                    <li><a href="#">Leschi Market</a></li>
+                                </ul></li>
+                            <li><a href="#">Media</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
                     </nav>
 
                 </div>
@@ -57,16 +82,6 @@
                         <span class="emp">Leschi Market</span><br />
                         (103 Lakeside Ave.)
                     </p>
-
-                    <!-- <div class="card">
-                        <button onclick="window.location.href='https://squareup.com/gift/PCXP0WR0G2X42/order';">Order e-Gift Card</button>
-
-                        <p>
-                            An e-Gift Card is a digital Hello Robin gift card sent via email that your recipient can redeem in-store. Just click above, choose a card design, add a personal message and the amount you'd like to give. Then enter the recipient's email address and hit send. 
-                        </p>
-
-                        <p><a href="https://squareup.com/gift/PCXP0WR0G2X42/check-balance">Check your gift card balance.</a></p>
-                    </div> -->
 
                 </main>
 
@@ -112,9 +127,9 @@
 
                     <p><a href="https://squareup.com/gift/PCXP0WR0G2X42/check-balance">Check your gift card balance.</a></p>
 
-                </div>
+                </div> <!-- end card-inner -->
 
-            </div>
+            </div> <!-- end card -->
 
 
             <footer>
@@ -137,7 +152,7 @@
                         <a href="https://wave.webaim.org/refer">WAVE</a>
                     </div>
 
-                </div>
+                </div> <!-- end footer-inner -->
 
             </footer>
 
