@@ -128,6 +128,8 @@ nav li:hover .dropdown {
     display: block;
     position: absolute;
     background-color: #32C0C3;
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, .33);
+    /* h-offset, v-offset, blur, spread (size), color */
 }
 
 nav li:hover .dropdown a {
@@ -163,7 +165,7 @@ aside {
     background-image: url('../img/sprinkles2.jpg');
     background-size: 400px;
     background-repeat: repeat;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .buffer {
@@ -177,9 +179,9 @@ aside {
     height: 10rem;
 }
 
-blockquote {
-    /* background-color: orange; */
-}
+/* blockquote {
+    background-color: orange;
+} */
 
 /* blockquote {
     margin: 20px 0;
@@ -282,15 +284,16 @@ button {
     margin: 0 auto;
     margin-bottom: 12px;
     padding: 8px;
-    border-radius: 12px;
+    border-radius: 8px;
     border: none;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #217D7F;
     background-color: #32C0C3;
     font-size: 1.2rem;
 }
 
 button:hover {
     cursor: pointer;
+    background-color: #5BE3E5;
 }
 
 
@@ -369,7 +372,7 @@ footer a {
 		border: 0 none;
 		border-bottom: 1px solid rgba(255,255,255,.1);
 		box-shadow: 0 0 4px rgba(0,0,0,.7) inset;
-		border-radius: 5px;
+		border-radius: 3px;
 		z-index: 999;
 		text-indent: -9999px;
 	}
