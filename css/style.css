@@ -43,24 +43,64 @@ body {
 }
 
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 16px 0 12px;
+h3, h4, h5, h6 {
+    margin: 12px 0 6px;
 }
-
-aside h2 {
-    margin-bottom: 6px;
-}
+h3 { font-size: 1.4rem; }
+h4 { font-size: 1.3rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1.1rem; }
 
 h1 {
+    margin: 20px 0 12px;
     font-size: 2rem;
+}
+
+h2 {
+    margin: 20px 0 6px;
+    font-size: 1.5rem;
+}
+
+h1:first-child, h2:first-child {
+    margin-top: 0;
+}
+
+p:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.content ul {
+    list-style-type: none;
+    list-style-position: outside;
+    /* padding-left: 10px; */
+}
+
+/* .content li {
+    text-indent: -10px;
+} */
+
+.content li li {
+    margin-left: 14px;
+}
+
+.content ul:not(:last-child) {
+    margin-bottom: 14px;
+}
+
+.cookie ul > li {
+    margin-bottom: 12px;
+}
+
+p, .content ul li {
+    line-height: 1.5rem;
 }
 
 .home h1 {
     text-align: center;
 }
 
-h2 {
-    font-size: 1.33rem;
+.home main p {
+    text-align: center;
 }
 
 
@@ -155,6 +195,12 @@ main {
     padding: 20px;
 }
 
+.buffer {
+    order: 2;
+    display: block;
+    width: 1.5rem;
+}
+
 aside {
     width: 30%;
     padding: 20px;
@@ -165,10 +211,27 @@ aside {
     border-radius: 8px;
 }
 
-.buffer {
-    display: block;
-    width: 1.5rem;
+.home main {
+    order: 1;
 }
+.home aside {
+    order: 3;
+}
+
+.inner-page main {
+    order: 3;
+}
+.inner-page .buffer {
+    display: none;
+}
+.inner-page aside {
+    order: 1;
+}
+
+
+
+
+
 
 
 .logo-title {
@@ -195,43 +258,32 @@ blockquote::after {
     content: "\201D";
 } */
 
-p {
-    line-height: 1.5rem;
-}
 
-p:not(:last-of-type) {
-    margin-bottom: 12px;
-}
-
-.home main p {
-    text-align: center;
-}
-
-.home main p:not(:last-of-type),
-.home aside p:not(:last-of-type) {
-    margin-bottom: 22px;
-}
 
 .emp {
     font-size: 1.2rem;
 }
 
-aside ul {
-    margin-bottom: 22px;
-}
 
-aside ul li {
-    line-height: 1.5rem;
-}
 
-aside ul li li {
+
+/* ul li li {
     margin-left: 20px;
-}
+} */
+
+
+
+/* aside ul li li {
+    margin-left: 20px;
+} */
 
 aside img {
     width: 100%;
+}
+aside img:not(:last-child) {
     margin-bottom: 12px;
 }
+
 
 .content a, .card a {
     display: inline-block;
@@ -350,6 +402,17 @@ footer a {
         display: none;
     }
 
+    .inner-page main {
+        order: 1;
+        background-image: url('../img/robin-egg-light.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: 0 75px;
+    }
+    .inner-page aside {
+        order: 3;
+    }
+
 
 	/* Navigation Button
 	-------------------------------------------------------- */
@@ -431,8 +494,6 @@ footer a {
     nav li:hover .dropdown a:hover {
         background-color: rgba(0,0,0,.5);
     }
-
-
 
 	.primary-nav li {
 		display: none;
